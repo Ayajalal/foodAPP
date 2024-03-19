@@ -1,0 +1,10 @@
+<div class="wrapper">
+  {{title}}
+<p>first works!</p>
+
+
+  <div class="wrapper2">
+    <app-second [title]="title" (seconedTitle)="showData($event)"></app-second>
+  </div>
+
+</div>

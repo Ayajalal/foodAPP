@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="wishList.length>0;else emptyList">
+  <div *ngFor="let item of wishList">
+
+    <label >
+      <input (click)="onToggle(item)" [checked]="item.isComplete" type="checkbox" class="checkBox">  {{ item.wishText}}
+    </label>
+    <div (click)="removeWish(item)">X</div>
+  </div>
+</div>
+<ng-template #emptyList>
+  there is no wishes to show .
+</ng-template>

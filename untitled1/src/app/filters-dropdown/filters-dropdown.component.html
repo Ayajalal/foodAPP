@@ -1,0 +1,5 @@
+<div>
+  <select [(ngModel)]="selectedValue" (ngModelChange)="onChange($event)">
+    <option [value]="filterItem.key" *ngFor="let filterItem of filterTypes;">{{filterItem.value}}</option>
+  </select>
+</div>
